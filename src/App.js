@@ -30,7 +30,6 @@ function App() {
 		const cashAmt = parseInt(cash);
 		const billAmt = parseInt(bill);
 
-		console.log(billAmt, cashAmt);
 		if (cashAmt < billAmt) {
 			setError('You have to work at Restaurant xD');
 		}
