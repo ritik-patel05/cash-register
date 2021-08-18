@@ -17,6 +17,16 @@ function App() {
 	const [notes2000, setNotes2000] = useState(0);
 
 	const handleClick = () => {
+		//Reset fields.
+		setNotes1(0);
+		setNotes5(0);
+		setNotes10(0);
+		setNotes20(0);
+		setNotes100(0);
+		setNotes500(0);
+		setNotes2000(0);
+
+		// Error Handling
 		if (!bill || !Number.isInteger(+bill)) {
 			setError('Invalid bill amount');
 			return;
@@ -35,6 +45,7 @@ function App() {
 			return;
 		}
 
+		// Notes calculation
 		let remAmt = cashAmt - billAmt;
 		for (let i = 0; i < notes.length && remAmt > 0; ++i) {
 			let value = notes[i];
