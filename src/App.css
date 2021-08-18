@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.label {
+	display: block;
+	font-size: 1.3rem;
+	font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+input,
+button {
+	display: block;
+	padding: 0.5rem;
+	margin: 1rem;
+	border-radius: 0.3rem;
+	border-color: green;
+	width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+	max-width: 250px;
+	height: 2rem;
+	margin-top: 0.5rem;
+}
+
+button {
+	cursor: pointer;
+	max-width: 150px;
+	background-color: green;
+	color: white;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+table {
+	width: 70%;
+	border-collapse: collapse;
+}
+
+table caption {
+	margin: 1rem;
+	padding: 1rem;
+	font-size: 2rem;
+}
+
+tr,
+th,
+td {
+	border-style: solid;
+	border-color: green;
+	padding: 0.2rem;
+	text-align: center;
+}
+
+main > h1 {
+	margin: 3rem 0 1rem 0;
+	color: green;
+}
+
+.subheading {
+	margin: 0.5rem 0 1rem 0;
+	font-size: 1.3rem;
 }
