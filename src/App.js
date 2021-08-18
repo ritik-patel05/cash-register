@@ -17,12 +17,12 @@ function App() {
 	const [notes2000, setNotes2000] = useState(0);
 
 	const handleClick = () => {
-		if (!bill) {
+		if (!bill || !Number.isInteger(+bill)) {
 			setError('Invalid bill amount');
 			return;
 		}
 
-		if (!cash) {
+		if (!cash || !Number.isInteger(+cash)) {
 			setError('Invalid cash amount');
 			return;
 		}
@@ -49,6 +49,7 @@ function App() {
 			else if (i === 5) setNotes5(take);
 			else setNotes1(take);
 		}
+		setError('');
 	};
 
 	return (
