@@ -67,18 +67,23 @@ function App() {
 				id='bill'
 			/>
 
-			<label className='label' htmlFor='cash'>
-				Enter the cash given:
-			</label>
-			<input
-				onChange={(event) => setCash(event.target.value)}
-				type='text'
-				id='cash'
-			/>
+			{bill ? (
+				<>
+					<label className='label' htmlFor='cash'>
+						Enter the cash given:
+					</label>
+					<input
+						onChange={(event) => setCash(event.target.value)}
+						type='text'
+						id='cash'
+					/>
+				</>
+			) : (
+				<></>
+			)}
 
 			<button onClick={handleClick}>Get Change</button>
 			<div>{error}</div>
-
 			<table>
 				<caption>Return Change</caption>
 				<tbody>
