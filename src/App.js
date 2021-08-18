@@ -32,6 +32,7 @@ function App() {
 
 		if (cashAmt < billAmt) {
 			setError('You have to work at Restaurant xD');
+			return;
 		}
 
 		let remAmt = cashAmt - billAmt;
